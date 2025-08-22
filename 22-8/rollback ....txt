@@ -1,0 +1,21 @@
+CREATE DATABASE mydb;
+USE mydb;
+CREATE TABLE class (
+    student_roll INT PRIMARY KEY,
+    name VARCHAR(50)
+);
+START TRANSACTION;
+INSERT INTO class VALUES(1, 'Aarav');
+INSERT INTO class VALUES(2, 'Priya');
+SAVEPOINT sp1;
+INSERT INTO class VALUES(3, 'Rohan');
+INSERT INTO class VALUES(4, 'Sneha');
+SAVEPOINT sp2;
+INSERT INTO class VALUES(5, 'Rahul');
+INSERT INTO class VALUES(6, 'Ananya');
+SAVEPOINT sp3;
+INSERT INTO class VALUES(7, 'Vikram');
+INSERT INTO class VALUES(8, 'Divya');
+ROLLBACK TO SAVEPOINT sp3;
+INSERT INTO class VALUES(9, 'Karan');
+COMMIT;

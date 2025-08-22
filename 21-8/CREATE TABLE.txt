@@ -1,0 +1,21 @@
+create database hello;
+use hello;
+CREATE TABLE Users (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(150) UNIQUE NOT NULL,
+    age INT CHECK (age >= 0),
+    phone VARCHAR(20),
+    address VARCHAR(255),
+    city VARCHAR(100),
+    state VARCHAR(100),
+    postal_code VARCHAR(15),
+    registration_date DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+INSERT INTO Users (name, email, age, phone, address, city, state, postal_code) VALUES
+('Arjun Kumar', 'arjun.kumar@example.com', 25, '98765-43210', '123 MG Road', 'Bangalore', 'Karnataka', '560001'),
+('Priya Sharma', 'priya.sharma@example.com', 30, '87654-32109', '456 Connaught Place', 'New Delhi', 'Delhi', '110001'),
+('Rohit Singh', 'rohit.singh@example.com', 22, '76543-21098', '789 Park Street', 'Kolkata', 'West Bengal', '700016'),
+('Anjali Patel', 'anjali.patel@example.com', 28, '65432-10987', '101 Marine Drive', 'Mumbai', 'Maharashtra', '400020'),
+('Vikram Joshi', 'vikram.joshi@example.com', 35, NULL, NULL, 'Chennai', 'Tamil Nadu', '600001');
