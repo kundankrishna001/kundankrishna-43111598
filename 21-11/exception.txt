@@ -1,0 +1,62 @@
+package hello;
+
+public class exception {
+
+	    public static void main(String[] args) {
+	        // 1. ArithmeticException
+	        try {
+	            int a = 10;
+	            int b = 0;
+	            int result = a / b; 
+	            System.out.println(result);
+	        }
+	        catch (ArithmeticException e) {
+	            System.out.println("ArithmeticException caught: " + e.getMessage());
+	        }
+	        finally {
+	            System.out.println("Finally executed (ArithmeticException)");
+	        }
+
+	        System.out.println("----------------------------------------");
+	        // 2. NullPointerException
+	        try {
+	            String s = null;
+	            System.out.println(s.length()); 
+	        }
+	        catch (NullPointerException e) {
+	            System.out.println("NullPointerException caught: " + e.getMessage());
+	        }
+	        finally {
+	            System.out.println("Finally executed (NullPointerException)");
+	        }
+
+	        System.out.println("----------------------------------------");
+	        // 3. NumberFormatException
+	        try {
+	            String n = "12A3"; // invalid number
+	            int x = Integer.parseInt(n);
+	            System.out.println(x);
+	        }
+	        catch (NumberFormatException e) {
+	            System.out.println("NumberFormatException caught: " + e.getMessage());
+	        }
+	        finally {
+	            System.out.println("Finally executed (NumberFormatException)");
+	        }
+
+	        System.out.println("----------------------------------------");
+	        // 4. ArrayIndexOutOfBoundsException
+	        try {
+	            int arr[] = {10, 20, 30};
+	            System.out.println(arr[5]); // invalid index
+	        }
+	        catch (ArrayIndexOutOfBoundsException e) {
+	            System.out.println("ArrayIndexOutOfBoundsException caught: " + e.getMessage());
+	        }
+	        finally {
+	            System.out.println("Finally executed (ArrayIndexOutOfBoundsException)");
+	        }
+	    }
+	}
+
+
