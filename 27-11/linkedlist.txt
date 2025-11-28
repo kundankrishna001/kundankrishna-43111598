@@ -1,0 +1,44 @@
+package abb;
+
+import java.util.*;
+
+public class llist {
+	public static void main(String args[]) {
+	LinkedList<String> tw= new LinkedList<String>();
+	tw.add("ajay");
+	tw.add("vijay");
+	tw.add("vishal");
+	System.out.println(tw);
+	tw.remove("vijay");
+	tw.remove(1);
+	System.out.println(tw);
+	LinkedList<String> mw= new LinkedList<String>();
+	mw.add("apple");
+	mw.add("cat");
+	mw.add("dog");
+	System.out.println(mw);
+	tw.addAll(mw);
+	System.out.println(tw);
+	LinkedList<String> ll3=new LinkedList<String>();  
+    ll3.add("John");  
+    ll3.add("Rahul"); 
+    System.out.println(ll3);
+    tw.addAll(1, ll3);
+    System.out.println(tw);
+    tw.addFirst("Lokesh");
+    System.out.println(tw);
+    tw.addLast("Harsh");
+    System.out.println(tw);
+	
+	
+	
+ 	
+
+	
+	
+	
+	
+	}
+
+}
+

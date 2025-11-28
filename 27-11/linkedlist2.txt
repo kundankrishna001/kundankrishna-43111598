@@ -1,0 +1,32 @@
+package abb;
+import java.util.*;
+public class ll12 {
+	public static void main(String args[]) {
+		  LinkedList<String> tw=new LinkedList<String>();  
+          tw.add("Ravi");  
+          tw.add("Vijay");  
+          tw.add("Ajay");  
+          tw.add("Anuj");  
+          tw.add("Gaurav");  
+          tw.add("Harsh");  
+          tw.add("Virat");  
+          tw.add("Gaurav");  
+          tw.add("Harsh");  
+          tw.add("Amit");  
+          System.out.println(tw);  
+          tw.remove("Vijay");
+          System.out.println(tw); 
+          LinkedList<String> ll2=new LinkedList<String>();  
+          ll2.add("Ravi");  
+          ll2.add("Hanumat"); 
+          System.out.println(ll2); 
+          tw.addAll(ll2);  
+          System.out.println(tw); 
+          tw.removeAll(ll2);  
+          System.out.println(tw);      
+
+
+		
+	}
+
+}

@@ -1,0 +1,17 @@
+package abb;
+
+import java.util.*;
+
+public class doc {
+	public static void main(String args[]) {
+		ArrayList<String> list = new ArrayList<String>();
+		list.add("raj");
+		list.add("ayush");
+		list.add("piyush");
+		Iterator<String> itr=list.iterator();
+		while(itr.hasNext()) {
+			System.out.println(itr.next());
+		}
+	}
+
+}
